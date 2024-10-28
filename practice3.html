@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Checker</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <script>
+        function check_password() {
+            var pass1 = document.getElementById("pass1").value;
+            var pass2 = document.getElementById("pass2").value;
+
+            if (pass1.length < 8) {
+                alert("Your password is less than 8 characters!")
+            } else if (pass1 != pass2) {
+                alert("Two passwords don't match!")
+            } else {
+                alert("Valid password!")
+            }
+        }
+    </script>
+
+    <a href="index.html"><- back</a><br>
+    First Password: <input type="text" id="pass1" value=""> <br>
+    Second Password: <input type="text" id="pass2" value=""> <br>
+
+    <button onclick="check_password()"> Check your passoword! </button> <br>
+  </body>
+</html>

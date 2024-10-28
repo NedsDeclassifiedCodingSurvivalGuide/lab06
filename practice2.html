@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Update Paragraph</title>
+    <style>
+        #styled-text {
+        border-style: solid;
+        border-width: 3px;
+    }
+    </style>
+  </head>
+  <body>
+    <a href="index.html"><- back</a>
+    <script>
+        function update_text() {
+            var R = document.getElementById("R").value;
+            var G = document.getElementById("G").value;
+            var B = document.getElementById("B").value;
+            var border_width = document.getElementById("border_width").value;
+            var bg_R = document.getElementById("bg_R").value;
+            var bg_G = document.getElementById("bg_G").value;
+            var bg_B = document.getElementById("bg_B").value;
+            var paragraph = document.getElementById("styled-text");
+            
+            paragraph.style.borderColor = `rgb(${R},${G},${B})`;
+            paragraph.style.borderWidth = border_width + "px";
+            paragraph.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+        }
+    </script>
+
+    <div id="styled-text">
+        JavaSctipt is fun!
+    </div>
+
+    Border R(0-255): <input type="range" id="R" min="0" max="255" value="0"> <br>
+    Border G(0-255): <input type="range" id="G" min="0" max="255" value="0"> <br>
+    Border B(0-255): <input type="range" id="B" min="0" max="255" value="0"> <br>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    Background R(0-255): <input type="range" id="bg_R" min="0" max="255" value="0"> <br>
+    Background G(0-255): <input type="range" id="bg_G" min="0" max="255" value="0"> <br>
+    Background B(0-255): <input type="range" id="bg_B" min="0" max="255" value="0"> <br>
+
+    <button onclick="update_text()"> Change the color! </button> <br>
+  </body>
+</html>
